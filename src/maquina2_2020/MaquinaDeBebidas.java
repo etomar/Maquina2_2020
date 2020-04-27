@@ -31,6 +31,8 @@ public class MaquinaDeBebidas{
 		
 	}
 	
+	
+	
 	/* Responder a una acción del usuario. Discrimina el tipo de
 	accion */
 	/* y utiliza las operaciones privadas */
