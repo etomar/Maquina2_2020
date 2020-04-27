@@ -9,7 +9,7 @@ package maquina2_2020;
  *
  * @author Rosana
  */
-public class MaquinaDeBebidas
+public abstract class MaquinaDeBebidas
 {
 private ContadorDeMonedas contador; 
 //Contador de monedas de la maquina
@@ -26,29 +26,29 @@ cambio */
 /* int b, cantidad inicial de botes en los dispensadores */
 /* float pvp, precio de las bebidas */
 /* Salidas: Ninguna */
-public void iniciarMaquinaDeBebidas (float m, int b, float pvp);
+public abstract void iniciarMaquinaDeBebidas (float m, int b, float pvp);
 /* Responder a una acción del usuario. Discrimina el tipo de
 accion */
 /* y utiliza las operaciones privadas */
 /* Entradas: char o, la orden del usuario */
 /* Salidas: Ninguna */
-public void darOrden (char o);
+public abstract void darOrden (char o);
 /* Visualiza la informacion de interes sobre la maquina */
 /* Botes en cada dispensador, precio de las bebidas, saldo
 del cliente */
 /* Entradas: Ninguna */
 /* Salidas: Ninguna */ 
-public void visualizarMaquina (); 
+public abstract void visualizarMaquina (); 
 /* Realiza las acciones relacionadas con la introducción de 
 monedas */ 
 /* Entradas: char o, la orden del usuario */ 
 /* Salidas: Ninguna */ 
-private void ordenMonedas (char o); 
+public abstract void ordenMonedas (char o); 
 /* Realiza las acciones relacionadas con la selección de una 
 bebida */ 
 /* Entradas: char o, la orden del usuario */ 
 /* Salidas: Ninguna */ 
-private void ordenSeleccion (char o); 
+public abstract void ordenSeleccion (char o); 
 
 
 }
