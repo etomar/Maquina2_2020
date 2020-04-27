@@ -13,7 +13,7 @@ public class MaquinaDeBebidas{
 	private ContadorDeMonedas contador; 	
 	//Contador de monedas de la maquina
 	private DispensadorDeBotes cola, Botes,	limon,	naranja, tonica, agua;	
-	private float precio;//Precio de las bebidas(común para todas)
+	private float precio;//Precio de las bebidas(com�n para todas)
 	
 	/* Inicializa la maquina y todos los elementos asociados */
 	/* Entradas: float m, cantidad inicial de monedas para el
@@ -23,6 +23,7 @@ public class MaquinaDeBebidas{
 	/* Salidas: Ninguna */
 	public void iniciarMaquinaDeBebidas (float m, int b, float pvp) {
 		contador.iniciarContadorDeMonedas(m);
+		Botes.iniciarContadorDeMonedas(m);
 		cola.iniciarDispensadorDeBotes(b);
 		limon.iniciarDispensadorDeBotes(b);
 		naranja.iniciarDispensadorDeBotes(b);
@@ -31,9 +32,7 @@ public class MaquinaDeBebidas{
 		
 	}
 	
-	
-	
-	/* Responder a una acción del usuario. Discrimina el tipo de
+	/* Responder a una acci�n del usuario. Discrimina el tipo de
 	accion */
 	/* y utiliza las operaciones privadas */
 	/* Entradas: char o, la orden del usuario */
@@ -48,11 +47,15 @@ public class MaquinaDeBebidas{
 				ordenSeleccion(o);
 				break;
 			
-			case 'A': case 'B': case 'C': case 'D': case 'R': case 'E':
+			case 'A': 
+			case 'B': 
+			case 'C': 
+			case 'D': 
+			case 'R': 
+			case 'E':
 				ordenMonedas(o);
 				break;
-				
-				
+		
 			default:
 				System.out.println("Error");
 				break;
@@ -65,17 +68,17 @@ public class MaquinaDeBebidas{
 	/* Entradas: Ninguna */
 	/* Salidas: Ninguna */ 
 	public void visualizarMaquina () {
-		System.out.println("Hay " + cola.botesDisponibles() + " de cola");
-		System.out.println("Hay " + limon.botesDisponibles() + " de limon");
-		System.out.println("Hay " + naranja.botesDisponibles() + " de naranja");
-		System.out.println("Hay " + tonica.botesDisponibles() + " de tonica");
-		System.out.println("Hay " + agua.botesDisponibles() + " de agua");
-		System.out.println("El total es " + precio + " €");
-		System.out.println("Tu saldo es de: " + contador.saldo());
+		System.out.println("Cola: " + cola.botesDisponibles());
+		System.out.println("Limon: " + limon.botesDisponibles());
+		System.out.println("Naranja: " + naranja.botesDisponibles());
+		System.out.println("Tonica: " + tonica.botesDisponibles());
+		System.out.println("Agua: " + agua.botesDisponibles());
+		System.out.println("El precio de las bebidas: " + precio);
+		System.out.println("Saldo del cliente : " + contador.saldo());
 		
 	}
 	
-	/* Realiza las acciones relacionadas con la introducción de 
+	/* Realiza las acciones relacionadas con la introducci�n de 
 	monedas */ 
 	/* Entradas: char o, la orden del usuario */ 
 	/* Salidas: Ninguna */ 
@@ -104,7 +107,7 @@ public class MaquinaDeBebidas{
 		}
 	}
 	
-	/* Realiza las acciones relacionadas con la selección de una 
+	/* Realiza las acciones relacionadas con la selecci�n de una 
 	bebida */ 
 	/* Entradas: char o, la orden del usuario */ 
 	/* Salidas: Ninguna */ 
